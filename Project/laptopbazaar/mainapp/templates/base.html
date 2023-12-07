@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Bazaar</title>
+    <!-- Replace with your stylesheet's path -->
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <script src="{% static 'js/main.js' %}"></script>
+    <link rel="images" href=""
+    <img src="{% static 'mainapp/static/images/your_image.jpg' %}">
+    <!-- Add any other meta tags, stylesheets, or head content here -->
+</head>
+<body>
+    <header>
+        <nav>
+            <!-- Navigation bar content -->
+            <div class="logo">
+                <a href="{% url 'index' %}">Laptop Bazaar</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}">Home</a></li>
+                <li><a href="{% url 'product_view' %}">Shop</a></li>
+                <!-- Add other navigation links as needed -->
+                {% if user.is_authenticated %}
+                    <li><a href="{% url 'dashboard_view' %}">Dashboard</a></li>
+                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                {% else %}
+                    <li><a href="{% url 'login_view' %}">Login</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {% block content %}
+        <!-- Main content will be inserted here by child templates -->
+
+        <h2>Featured Products</h2>
+    <section class="products">
+        
+
+        
+        <div class="product">
+            <img src="hp-envy-.jpg" alt="HP ENVY x360">
+            <h3>HP ENVY x360</h3>
+            <h2>Key Features:</h2>
+            <ul>
+                <li>Operating System: Windows 11 Home</li>
+                <li>Memory: 16 GB DDR4-3200 MHz RAM (2 x 8 GB)</li>
+                <li>Storage: 1 TB SSD</li>
+                <li>Chipset: Intel® Integrated SoC</li>
+                <li>Graphics Processor: Integrated: Intel® Iris® Xᵉ Graphics</li>
+                <li>Processor: Intel® Core™ i7</li>
+                <li>Processor Family: 11th Generation Intel® Core™ i7 processor</li>
+                <li>Display: 15.6 Inches</li>
+            </ul>
+            <span class="price">Ksh 60,000</span>
+            <a href="#" class="btn">Add to Cart</a>
+            <!-- Compare Button -->
+            <a href="#" class="btn compare-btn">Compare</a>
+        </div>
+        
+        <div class="product">
+            <img src="Hp_spectre_360.png" alt="HP Spectre x360">
+            <h3>HP Spectre x360</h3>
+            <h2>Key Features:</h2>
+            <ul>
+                <li>Operating System: Windows 11 Home</li>
+                <li>Ram Memory: 8 GB</li>
+                <li>Storage: 1 TB Intel® PCIe® NVMe™ M.2 SSD + 32 GB Intel® Optane™ memory</li>
+                <li>Graphics Processor: Integrated: Intel® Iris® Xᵉ Graphics</li>
+                <li>Processor: Intel® Core™ i7</li>
+                <li>Performance Technology: Intel® Evo™ laptop</li>
+                <li>Processor Family: 11th Generation Intel® Core™ i7 processor</li>
+                <li>Display: 13.5 Inches</li>
+            </ul>
+            <span class="price">Ksh 70,000</span>
+            <a href="#" class="btn">Add to Cart</a>
+            <!-- Compare Button -->
+            <button class="btn compare-btn">Compare</button>
+        </div>
+
+        <div class="product">
+            <img src="HP_ENVY_360.webp" alt="HP ENVY x360">
+            <h3>HP ENVY x360</h3>
+            <h2>Key Features:</h2>
+            <ul>
+                <li>Intel Core i7-1195G7</li>
+                <li>8 GB RAM DDR4</li>
+                <li>1 TB SSD</li>
+                <li>13.3″ Touch Screen</li>
+                <li>Intel Iris Xᵉ Graphics</li>
+            </ul>
+            <span class="price">Ksh 65,000</span>
+            <a href="#" class="btn">Add to Cart</a>
+            <!-- Compare Button -->
+            <button class="btn compare-btn">Compare</button>
+        </div>
+
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+        <script src="script.js"></script>
+    </section>
+        {% endblock %}
+    </main>
+
+    <footer>
+
+        <div class="social-media">
+            <a href="https://www.facebook.com/Laptop Bazaar" target="_blank">
+                <img src="facebook-logo.png" alt="Facebook">
+                
+            </a>
+            <a href="#" target="_blank">
+                <img src="x-logo.png" alt="X">
+                
+            </a>
+            <a href="https://www.linkedin.com/company/Laptop Bazaar" target="_blank">
+                <img src="linkedin-logo.png" alt="LinkedIn">
+                
+            </a>
+            <a href="https://wa.me/254717219123" target="_blank">
+                <img src="whatsapp-logo.png" alt="WhatsApp">
+                
+            </a>
+            <a href="https://www.instagram.com/Laptop Bazaar" target="_blank">
+                <img src="instagram-logo.png" alt="Instagram">
+                
+            </a>
+        </div>
+        <br>
+        <br>
+        <p>&copy; {{ year }} Laptop Bazaar. All rights reserved.</p>
+    </footer>
+
+    <!-- Replace with your script's path -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <!-- Add any other scripts here -->
+</body>
+</html>

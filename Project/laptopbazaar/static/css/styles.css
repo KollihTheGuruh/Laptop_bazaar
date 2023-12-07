@@ -1,0 +1,427 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #eb0b0b;
+    margin: 0;
+    padding: 0;
+    background-image: url('background.jpg')
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+nav {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #5cb85c;
+}
+
+.main {
+    padding: 1rem;
+}
+
+.footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Forms and Buttons */
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input[type="text"],
+.form-group input[type="email"],
+.form-group input[type="password"] {
+    width: 100%;
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input[type="text"]:focus,
+.form-group input[type="email"]:focus,
+.form-group input[type="password"]:focus {
+    border-color: #5cb85c;
+}
+
+button,
+.input-button {
+    display: inline-block;
+    background: #5cb85c;
+    color: #fff;
+    border: none;
+    padding: 0.7rem 1.5rem;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s ease-in-out;
+}
+
+button:hover,
+.input-button:hover {
+    background: #4aa54a;
+}
+
+/* Utility Classes */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.text-center {
+    text-align: center;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    nav ul li a {
+        margin-left: 10px;
+    }
+}
+
+/* Reset some default styles */
+/* Global styles */
+body, h1, h2, ul, li, p {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+  }
+  body {
+    font-family: "Arial", sans-serif;
+    color: #fff;
+    background-color: rgb(26, 26, 100);
+    background-image: url('background.jpg');
+    background-size: cover; /* Cover the entire page */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-attachment: fixed; /* Keep the image fixed in place when scrolling */
+  }
+  
+  header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .compare-btn {
+    background-color: #007bff; /* Bootstrap primary blue for example */
+    color: white; /* Text color set to white for better contrast */
+    border: 1px solid transparent; /* Add border to maintain structure */
+    padding: 5px 10px; /* Smaller padding than the Add to Cart button */
+    font-size: 14px; /* Smaller font size than the Add to Cart button */
+    margin: 2px; /* Optional: smaller margin */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 6px; /* Optional: you can adjust border-radius to your liking */
+  }
+  
+  .compare-btn:hover {
+    background-color: #0056b3; /* A darker shade of blue for hover effect */
+    color: white;
+  }
+  
+    h1 {
+      font-size: 36px;
+      margin-top: 0;
+    }
+    
+    /* Navigation styles */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 20px;
+    }
+    
+    .logo a {
+      font-size: 24px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+    }
+    
+    .nav-links li {
+      list-style: none;
+      display: inline;
+      margin: 0 10px;
+    }
+    
+    .nav-links a {
+      text-decoration: none;
+      color: #fff;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    
+    .nav-links a:hover {
+      color: #ff9900;
+    }
+    
+    /* Hero section styles */
+    .hero {
+      background-image: url('hero-bg.jpg'); /* Replace with your image */
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      text-align: center;
+      padding: 10px 0;
+      max-height: 500px;
+    }
+    
+    .hero h1 {
+      font-size: 48px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+    
+    .btn {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #ff9900;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+    
+    .btn:hover {
+      background-color: #333;
+    }
+    
+    /* Product section styles */
+    .products {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: stretch;
+      margin: 20px;
+      /*overflow-x: auto;*/
+    }
+    
+    .carousel {
+      position: relative;
+      width: 50%;
+      margin: auto;
+      overflow: hidden;
+  }
+  
+  .slide {
+      display: none;
+  }
+  
+  .active {
+    display: block;
+  }
+  
+  img {
+    width: 50%;
+  }
+  
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  
+  .slide:hover .overlay {
+    opacity: 1;
+  }
+  
+  .specs {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .compare {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 8px 16px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .active {
+      display: block;
+  }
+  
+  img {
+      width: 100%;
+  }
+  
+  button {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      font-size: 18px;
+      cursor: pointer;
+  }
+  
+  .prev {
+      left: 10px;
+  }
+  
+  .next {
+      right: 10px;
+  }
+  
+  
+    .product {
+      background-color: #b8b1b1;
+      border: 1px solid #ddd;
+      padding: 10px;
+      margin: 10px;
+      text-align: left;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transition: transform 0.8s;
+      width: 250px; /* Adjust the width to your liking */
+      height: 200;
+  
+    }
+    
+    .product:hover {
+      transform: translateY(-9px);
+      box-shadow: 0 7px 7px rgba(4, 238, 82, 0.2);
+    }
+    
+    .product h3 {
+      font-size: 17px;
+      margin-bottom: 10px;
+      color: #050505;
+    }
+    
+    .product img {
+      max-width: 40%; /* Adjust the max width as needed */
+      height: auto;
+    }
+    
+    .product ul {
+      list-style-type: square;
+      padding: 0;
+      text-align: left;
+      font-size: 14px;
+    }
+    
+    .product li {
+      margin: 5px 0;
+      color: #080808;
+    }
+    
+    .price {
+      font-weight: bold;
+      color: #ff5722;
+      font-size: 20px;
+      margin-top: 10px;
+    }
+    
+  /* Footer styles */
+  footer {
+    background-color: rgb(143, 183, 216);
+    color: #f10d0d;
+    text-align: center;
+    padding: 10px 0;
+    font-weight: bold;
+  }
+  
+  /* Social media styles */
+  .social-media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+  }
+  
+  .social-media a {
+    text-decoration: none;
+    color: #05050c;
+    display: flex;
+    align-items: center;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  .social-media img {
+    width: 30px; /* Adjust the width as needed */
+    height: 30px; /* Adjust the height as needed */
+    margin-right: 10px; /* Space between icon and text */
+  }
+  
