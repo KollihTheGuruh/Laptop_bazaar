@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="checkout-container">
+        <h2>Checkout</h2>
+        <form method="post" action="{% url 'process_checkout' %}">
+            {% csrf_token %}
+            
+            <!-- Customer Information -->
+            <div class="customer-information">
+                <h3>Customer Information</h3>
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+
+            <!-- Shipping Address -->
+            <div class="shipping-address">
+                <h3>Shipping Address</h3>
+                <label for="address">Address:</label>
+                <input type="text" id="address" name="address" required>
+
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+
+                <label for="zip">Postal/Zip Code:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+
+            <!-- Payment Details -->
+            <div class="payment-details">
+                <h3>Payment Details</h3>
+                <!-- Include fields for payment details like credit card information -->
+                <!-- Note: Ensure secure handling of payment information -->
+            </div>
+
+            <!-- List of Selected Items -->
+            <div class="selected-items">
+                <h3>Your Order</h3>
+                <!-- Dynamically list items in the cart with price, quantity -->
+            </div>
+
+            <button type="submit" class="checkout-button">Complete Purchase</button>
+        </form>
+    </div>
+{% endblock %}

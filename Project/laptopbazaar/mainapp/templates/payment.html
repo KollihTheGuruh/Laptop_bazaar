@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="payment-container">
+        <h2>Payment</h2>
+        <form method="post" action="{% url 'process_payment' %}">
+            {% csrf_token %}
+
+            <!-- Payment Information -->
+            <div class="payment-information">
+                <h3>Payment Information</h3>
+                <!-- Note: Actual implementation will vary based on the payment method used -->
+                <!-- Example: M-Pesa Payment Details -->
+                <label for="phone">M-Pesa Phone Number:</label>
+                <input type="text" id="phone" name="phone" placeholder="e.g., +2547xxxxxxxx" required>
+                
+                <!-- Add any additional payment fields if necessary -->
+            </div>
+
+            <!-- Payment Instructions -->
+            <div class="payment-instructions">
+                <p>Please enter your M-Pesa phone number. You will receive a prompt on your phone to complete the payment.</p>
+            </div>
+
+            <button type="submit" class="payment-button">Make Payment</button>
+        </form>
+    </div>
+{% endblock %}

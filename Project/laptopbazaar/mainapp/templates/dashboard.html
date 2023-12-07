@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="dashboard-container">
+        <h2>Dashboard</h2>
+
+        {% if user.is_superuser %}
+            <section class="superuser-dashboard">
+                <h3>Superuser Panel</h3>
+                <!-- Superuser-specific functionality: manage users, view all orders, etc. -->
+            </section>
+        {% elif user.is_client %}
+            <section class="client-dashboard">
+                <h3>Client Panel</h3>
+                <!-- Client-specific functionality: manage product listings, view sales reports, etc. -->
+                <a href="{% url 'add_product' %}">Add New Product</a>
+                <!-- Other client options -->
+            </section>
+        {% else %}
+            <section class="customer-dashboard">
+                <h3>Customer Panel</h3>
+                <!-- Customer-specific functionality: view orders, manage account, etc. -->
+                <a href="{% url 'view_orders' %}">View My Orders</a>
+                <!-- Other customer options -->
+            </section>
+        {% endif %}
+    </div>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="product-list-container">
+        <h2>Our Laptops</h2>
+        <div class="laptop-grid">
+            {% for laptop in laptops %}
+                <div class="laptop-item">
+                    <img src="{{ laptop.image_url }}" alt="{{ laptop.brand }} - {{ laptop.model }}">
+                    <h3>{{ laptop.brand }} - {{ laptop.model }}</h3>
+                    <p>Price: {{ laptop.price }}</p>
+                    <a href="{% url 'laptop_detail' laptop.id %}">View Details</a>
+                    <!-- Add to cart and compare buttons (if applicable) -->
+                </div>
+            {% empty %}
+                <p>No laptops available at the moment.</p>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="compare-container">
+        <h2>Compare Laptops</h2>
+        {% if laptops_to_compare %}
+            <table class="compare-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        {% for laptop in laptops_to_compare %}
+                            <th>{{ laptop.brand }} {{ laptop.model }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repeat this structure for each specification -->
+                    <tr><td>Brand</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.brand }}</td>{% endfor %}</tr>
+                    <tr><td>Price</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.price }}</td>{% endfor %}</tr>
+                    <tr><td>Processor (CPU)</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.processor }}</td>{% endfor %}</tr>
+                    <tr><td>Graphics Card (GPU)</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.graphics_card }}</td>{% endfor %}</tr>
+                    <!-- ... More specifications ... -->
+                    <tr><td>Weight and Dimensions</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.weight }} - {{ laptop.dimensions }}</td>{% endfor %}</tr>
+                    <tr><td>Cooling System</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.cooling_system }}</td>{% endfor %}</tr>
+                    <tr><td>Security Features</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.security_features }}</td>{% endfor %}</tr>
+                    <tr><td>Optical Drive</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.optical_drive }}</td>{% endfor %}</tr>
+                    <tr><td>Color Options</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.color_options }}</td>{% endfor %}</tr>
+                    <tr><td>Warranty and Support Services</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.warranty }}</td>{% endfor %}</tr>
+                    <!-- ... -->
+                </tbody>
+            </table>
+        {% else %}
+            <p>Please select laptops to compare.</p>
+        {% endif %}
+    </div>
+{% endblock %}
