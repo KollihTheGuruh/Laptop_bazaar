@@ -258,8 +258,7 @@ button {
     font-size: 20px;
     margin-top: 10px;
   }
-  
-/* Footer styles */
+  /* Footer styles */
 footer {
   background-color: rgb(143, 183, 216);
   color: #f10d0d;
@@ -283,10 +282,20 @@ footer {
   align-items: center;
   margin: 0 10px;
   font-weight: bold;
+  border-radius: 50%; /* Make the icons circular */
+  padding: 10px; /* Adjust padding as needed for icon size */
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.social-media a:hover {
+  background-color: #05050c; /* Change background color on hover */
+  color: #ffffff; /* Change text color on hover */
+  transform: scale(1.1); /* Add a slight scale effect on hover */
 }
 
 .social-media img {
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
   margin-right: 10px; /* Space between icon and text */
+  border-radius: 50%; /* Make the icons circular */
 }
