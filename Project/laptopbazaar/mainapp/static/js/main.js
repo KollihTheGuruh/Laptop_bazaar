@@ -24,7 +24,7 @@ document.addEventListener('DOMContentLoaded', function () {
             addToComparisonList(laptopId);
 
             // Redirect to the comparison page
-            window.location.href = '/compare/'; // Replace with your comparison page URL
+            window.location.href = '/compare.html/'; // Replace with your comparison page URL
         });
     });
 
@@ -43,3 +43,14 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 });
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/static/js/sw.js').then(function(registration) {
+            // Service worker registration was successful
+            console.log('Service Worker registered with scope:', registration.scope);
+        }).catch(function(error) {
+            // Service worker registration failed
+            console.error('Service Worker registration failed:', error);
+        });
+    });
+}

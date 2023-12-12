@@ -108,7 +108,7 @@
                 <img src="/static/images/facebook-logo.png" alt="Facebook">
             </a>
             <a href="#" target="_blank">
-                <img src="static/images/x-logo.png" alt="X">
+                <img src="/static/images/x-logo.png" alt="X">
             </a>
             <a href="https://www.linkedin.com/company/Laptop Bazaar" target="_blank">
                 <img src="/static/images/linkedin-logo.png" alt="LinkedIn">
@@ -124,5 +124,15 @@
         <br>
         <p>&copy; 2023 Laptop Bazaar</p>
     </footer>
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js').then(function(registration) {
+                console.log('Service Worker registered with scope:', registration.scope);
+            }).catch(function(error) {
+                console.error('Service Worker registration failed:', error);
+            });
+        }
+    </script>
+    
 </body>
 </html>
