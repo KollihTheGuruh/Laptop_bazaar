@@ -25,14 +25,37 @@ header {
   text-align: center;
   padding: 20px 0;
 }
+/* Styling for the moving heading */
+.moving-heading {
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center;
+  white-space: nowrap; /* Prevent text from wrapping */
+  overflow: hidden; /* Hide overflow text */
+  position: relative; /* Required for animation */
+  animation: moveLeftRight 10s linear infinite; /* Animation settings */
+}
 
+/* Keyframes for the animation */
+@keyframes moveLeftRight {
+  0% {
+    left: -100%; /* Start from the left side */
+  }
+  100% {
+    left: 100%; /* Move to the right side */
+  }
+}
+
+/* Adjust the font size and other styles as needed */
+
+/* Compare button styles */
 .compare-btn {
   background-color: #007bff; /* Bootstrap primary blue for example */
   color: white; /* Text color set to white for better contrast */
   border: 1px solid transparent; /* Add border to maintain structure */
   padding: 5px 10px; /* Smaller padding than the Add to Cart button */
   font-size: 14px; /* Smaller font size than the Add to Cart button */
-  margin: 2px; /* Optional: smaller margin */
+  margin: 10px 0; /* Add margin below the button */
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -46,99 +69,99 @@ header {
   color: white;
 }
 
-  h1 {
-    font-size: 36px;
-    margin-top: 0;
-  }
-  
-  /* Navigation styles */
-  nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-  }
-  
-  .logo a {
-    font-size: 24px;
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-  }
-  
-  .nav-links li {
-    list-style: none;
-    display: inline;
-    margin: 0 10px;
-  }
-  
-  .nav-links a {
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    transition: color 0.3s;
-  }
-  
-  .nav-links a:hover {
-    color: #ff9900;
-  }
-  
-  /* Hero section styles */
-  .hero {
-    background-image: url('hero-bg.jpg'); /* Replace with your image */
-    background-size: cover;
-    background-position: center;
-    color: #fff;
-    text-align: center;
-    padding: 10px 0;
-    max-height: 500px;
-  }
-  
-  .hero h1 {
-    font-size: 48px;
-    margin-top: 0;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-size: 20px;
-    margin-bottom: 40px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    background-color: #ff9900;
-    color: #fff;
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #333;
-  }
-  
-  /* Product section styles */
-  .products {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: stretch;
-    margin: 20px;
-    /*overflow-x: auto;*/
-  }
-  
-  .carousel {
-    position: relative;
-    width: 50%;
-    margin: auto;
-    overflow: hidden;
+h1 {
+  font-size: 36px;
+  margin-top: 0;
+}
+
+/* Navigation styles */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.logo a {
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+.nav-links li {
+  list-style: none;
+  display: inline;
+  margin: 0 10px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #ff9900;
+}
+
+/* Hero section styles */
+.hero {
+  background-image: url('hero-bg.jpg'); /* Replace with your image */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  max-height: 500px;
+}
+
+.hero h1 {
+  font-size: 48px;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #ff9900;
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #333;
+}
+
+/* Product section styles */
+.products {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch;
+  margin: 20px;
+  /*overflow-x: auto;*/
+}
+
+.carousel {
+  position: relative;
+  width: 50%;
+  margin: auto;
+  overflow: hidden;
 }
 
 .slide {
-    display: none;
+  display: none;
 }
 
 .active {
@@ -147,26 +170,6 @@ header {
 
 img {
   width: 50%;
-}
-
-
-.overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.5);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.slide:hover .overlay {
-  opacity: 1;
 }
 
 .specs {
@@ -180,85 +183,75 @@ img {
   color: #fff;
   padding: 8px 16px;
   border: none;
-  cursor: pointer;
   font-size: 14px;
 }
 
 .active {
-    display: block;
+  display: block;
 }
 
 img {
-    width: 100%;
+  width: 100%;
 }
 
 button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: none;
-    border: none;
-    font-size: 18px;
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
 }
 
-.prev {
-    left: 10px;
+.product {
+  background-color: #b8b1b1;
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 10px;
+  text-align: left;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.8s;
+  width: 250px; /* Adjust the width to your liking */
+  height: 200;
 }
 
-.next {
-    right: 10px;
+.product:hover {
+  transform: translateY(-9px);
+  box-shadow: 0 7px 7px rgba(4, 238, 82, 0.2);
 }
 
+.product h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #050505;
+}
 
-  .product {
-    background-color: #b8b1b1;
-    border: 1px solid #ddd;
-    padding: 10px;
-    margin: 10px;
-    text-align: left;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.8s;
-    width: 250px; /* Adjust the width to your liking */
-    height: 200;
+.product img {
+  max-width: 40%; /* Adjust the max width as needed */
+  height: auto;
+}
 
-  }
-  
-  .product:hover {
-    transform: translateY(-9px);
-    box-shadow: 0 7px 7px rgba(4, 238, 82, 0.2);
-  }
-  
-  .product h3 {
-    font-size: 17px;
-    margin-bottom: 10px;
-    color: #050505;
-  }
-  
-  .product img {
-    max-width: 40%; /* Adjust the max width as needed */
-    height: auto;
-  }
-  
-  .product ul {
-    list-style-type: square;
-    padding: 0;
-    text-align: left;
-    font-size: 14px;
-  }
-  
-  .product li {
-    margin: 5px 0;
-    color: #080808;
-  }
-  
-  .price {
-    font-weight: bold;
-    color: #ff5722;
-    font-size: 20px;
-    margin-top: 10px;
-  }
-  /* Footer styles */
+.product ul {
+  list-style-type: square;
+  padding: 0;
+  text-align: left;
+  font-size: 14px;
+}
+
+.product li {
+  margin: 5px 0;
+  color: #080808;
+}
+
+.price {
+  font-weight: bold;
+  color: #ff5722;
+  font-size: 20px;
+  margin-top: 10px;
+}
+
+/* Footer styles */
 footer {
   background-color: rgb(143, 183, 216);
   color: #f10d0d;
@@ -282,20 +275,10 @@ footer {
   align-items: center;
   margin: 0 10px;
   font-weight: bold;
-  border-radius: 50%; /* Make the icons circular */
-  padding: 10px; /* Adjust padding as needed for icon size */
-  transition: background-color 0.3s, transform 0.2s;
-}
-
-.social-media a:hover {
-  background-color: #05050c; /* Change background color on hover */
-  color: #ffffff; /* Change text color on hover */
-  transform: scale(1.1); /* Add a slight scale effect on hover */
 }
 
 .social-media img {
   width: 30px; /* Adjust the width as needed */
   height: 30px; /* Adjust the height as needed */
   margin-right: 10px; /* Space between icon and text */
-  border-radius: 50%; /* Make the icons circular */
 }
