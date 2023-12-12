@@ -2,6 +2,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import authenticate, login, logout
 from mainapp.forms.registration_form import RegistrationForm
 from .models import Laptop, User, Order
+from django.http import HttpResponse
 # Add any other necessary imports
 
 def home_view(request):
@@ -61,8 +62,12 @@ def product_view(request):
 
 # Compare View
 def compare_view(request):
-    # This will depend on how you're planning to implement the comparison feature.
-    # For instance, you might use query parameters to get the IDs of laptops to compare.
+    # Get the list of selected laptop IDs from the query parameters
+    selected_product_ids = request.GET.getlist('product_id')
+
+    # Fetch laptop details based on the selected IDs
+    selected_laptops = Laptop.objects.filter(id__in=selected_product_ids)
+
     return render(request, 'compare.html')
 
 # Checkout View

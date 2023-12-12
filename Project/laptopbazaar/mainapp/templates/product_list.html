@@ -12,8 +12,20 @@
                     <h3>{{ laptop.brand }} - {{ laptop.model }}</h3>
                     <p>Price: {{ laptop.price }}</p>
                     <a href="{% url 'laptop_detail' laptop.id %}">View Details</a>
+                    <!-- Inside each product card -->
+                    <input type="checkbox" class="compare-checkbox" data-product-id="1"> <!-- Replace "1" with a unique identifier for each laptop -->
+                    <button class="btn compare-btn" onclick="compareLaptops()">Compare</button>
+                    <a href="#" class="btn">Add to Cart</a>
+                    <!-- Inside each product card -->
+
                     <!-- Add to cart and compare buttons (if applicable) -->
                 </div>
+                <!-- Inside each product card -->
+                <div class="product">
+                    <!-- ... other product details ... -->
+                    <a href="{% url 'compare_view' %}?product_id={{ laptop.id }}" class="btn compare-btn">Compare</a>
+                </div>
+
             {% empty %}
                 <p>No laptops available at the moment.</p>
             {% endfor %}
