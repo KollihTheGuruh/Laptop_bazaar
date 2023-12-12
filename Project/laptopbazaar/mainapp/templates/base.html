@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Bazaar</title>
     <link rel="stylesheet" type="text/css" href="/static/css/styles.css">
-    <script src="{% static 'js/main.js' %}"></script>
+    <script src="/static/js/main.js"></script>
     <!-- Add any other meta tags, stylesheets, or head content here -->
 </head>
 <body>
@@ -21,7 +21,7 @@
                 <li><a href="{% url 'product_view' %}">Shop</a></li>
                 <li><a href="#">About</a></li> <!-- Added About link -->
                 <li><a href="#">Contact</a></li> <!-- Added Contact link -->
-                <li><a href="#"><img src="{% static 'laptop_bazaar_logo.jpg' %}" alt="Cart" style="height:20px; width:auto;"> Cart</a></li> <!-- Added Cart link -->
+                <li><a href="#"><img src="/static/images/laptop_bazaar_logo.jpg" alt="Cart" style="height:20px; width:auto;"> Cart</a></li> <!-- Added Cart link -->
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'dashboard_view' %}">Dashboard</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
