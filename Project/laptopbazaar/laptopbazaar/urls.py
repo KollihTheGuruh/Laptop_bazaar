@@ -20,6 +20,8 @@ from mainapp.views import home_view
 from django.contrib.auth.views import LogoutView
 from django.urls import path
 from mainapp.views import about_us_view
+from django.conf import settings
+from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -31,3 +33,6 @@ urlpatterns = [
 
     # You can add other app URLs similarly
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
