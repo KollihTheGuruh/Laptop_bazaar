@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-
 {% load static %}
-
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Bazaar</title>
-    <!-- Link to your stylesheet -->
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
     <script src="{% static 'js/main.js' %}"></script>
     <!-- Add any other meta tags, stylesheets, or head content here -->
 </head>
 <body>
     <header>
         <nav>
-            <!-- Navigation bar content -->
             <div class="logo">
                 <a href="{% url 'index' %}">Laptop Bazaar</a>
             </div>
             <ul class="nav-links">
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'product_view' %}">Shop</a></li>
-                <!-- Add other navigation links as needed -->
+                <li><a href="#">About</a></li> <!-- Added About link -->
+                <li><a href="#">Contact</a></li> <!-- Added Contact link -->
+                <li><a href="#"><img src="{% static 'laptop_bazaar_logo.jpg' %}" alt="Cart" style="height:20px; width:auto;"> Cart</a></li> <!-- Added Cart link -->
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'dashboard_view' %}">Dashboard</a></li>
                     <li><a href="{% url 'logout' %}">Logout</a></li>
@@ -37,11 +35,13 @@
         {% block content %}
         <!-- Main content will be inserted here by child templates -->
 
+        <!-- Featured Products Section -->
         <h2>Featured Products</h2>
         <section class="products">
             <!-- Product listings -->
             <!-- ... (Your product listings) ... -->
         </section>
+
         {% endblock %}
     </main>
 
@@ -66,7 +66,7 @@
         </div>
         <br>
         <br>
-        <p>&copy; {{ year }} Laptop Bazaar. All rights reserved.</p>
+        <p>&copy; 2023 Laptop Bazaar</p>
     </footer>
 </body>
 </html>

@@ -1,4 +1,11 @@
 /* General Styles */
+/* Reset some default styles */
+/* Global styles */
+body, h1, h2, ul, li, p {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
