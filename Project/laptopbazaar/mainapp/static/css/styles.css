@@ -108,7 +108,7 @@ nav {
 
 /* Hero section styles */
 .hero {
-  background-image: url('/static/images/laptop_bazaar_logo.jpg'); /* Replace with your image */
+  background-image: url('/sttic/images/laptop_bazaar_logo.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: center;
   color: #fff;
