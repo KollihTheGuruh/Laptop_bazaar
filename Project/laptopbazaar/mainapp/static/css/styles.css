@@ -33,7 +33,7 @@ header {
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflow text */
   position: relative; /* Required for animation */
-  animation: moveLeftRight 10s linear infinite; /* Animation settings */
+  animation: moveLeftRight 20s linear infinite; /* Animation settings */
 }
 
 /* Keyframes for the animation */
@@ -108,19 +108,19 @@ nav {
 
 /* Hero section styles */
 .hero {
-  background-image: url('/sttic/images/laptop_bazaar_logo.jpg'); /* Replace with your image */
+  /*background-image: url('/static/images/laptop_bazaar_logo.jpg'); /* Replace with your image */
   background-size: cover;
-  background-position: center;
-  color: #fff;
-  text-align: center;
-  padding: 10px 0;
-  max-height: 500px;
+  background-position: left;
+  color: #e70f0f;
+  text-align: left;
+  padding: 1px 0;
+  max-height: 50px;
 }
 
 .hero h1 {
   font-size: 48px;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 60px;
 }
 
 .hero p {
@@ -246,17 +246,17 @@ button {
 
 .price {
   font-weight: bold;
-  color: #ff5722;
+  color: #05fc11;
   font-size: 20px;
   margin-top: 10px;
 }
 
 /* Footer styles */
 footer {
-  background-color: rgb(19, 20, 20);
-  color: #f10d0d;
+  background-color: rgb(11, 11, 241);
+  color: #0e0d0d;
   text-align: center;
-  padding: 10px 0;
+  padding: 1px 0;
   font-weight: bold;
 }
 
