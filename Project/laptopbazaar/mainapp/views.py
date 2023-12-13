@@ -68,7 +68,7 @@ def compare_view(request):
     # Fetch laptop details based on the selected IDs
     selected_laptops = Laptop.objects.filter(id__in=selected_product_ids)
 
-    return render(request, 'compare.html')
+    return render(request, 'compare.html',  {'selected_laptops': selected_laptops})
 
 # Checkout View
 def checkout_view(request):

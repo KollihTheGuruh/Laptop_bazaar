@@ -48,6 +48,10 @@ header {
 
 /* Adjust the font size and other styles as needed */
 
+.compare-container {
+  color: white;
+}
+
 /* Compare button styles */
 .compare-btn {
   background-color: #007bff; /* Bootstrap primary blue for example */
@@ -253,8 +257,11 @@ button {
 
 /* Footer styles */
 footer {
-  background-color: rgb(11, 11, 241);
+  background-color: rgb(172, 172, 231);
   color: #0e0d0d;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
   text-align: center;
   padding: 1px 0;
   font-weight: bold;
