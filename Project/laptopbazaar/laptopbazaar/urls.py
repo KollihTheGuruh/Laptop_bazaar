@@ -28,7 +28,7 @@ from mainapp import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('mainapp/', include('mainapp.urls')),  # Include URLs from mainapp
-    path('', home_view, name='home'),  # Define the root URL pattern
+   # path('', home_view, name='home'),  # Define the root URL pattern
     path('', home_view, name='index'),
     path('logout/', LogoutView.as_view(), name='logout'),
     path('about_us/', about_us_view, name='about_us'),

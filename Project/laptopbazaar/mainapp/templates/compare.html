@@ -4,12 +4,12 @@
 {% block content %}
     <div class="compare-container">
         <h2>Compare Laptops</h2>
-        {% if laptops_to_compare %}
+        {% if selected_laptops %}
             <table class="compare-table">
                 <thead>
                     <tr>
                         <th>Feature</th>
-                        {% for laptop in laptops_to_compare %}
+                        {% for laptop in selected_laptops %}
                             <th>{{ laptop.brand }} {{ laptop.model }}</th>
                         {% endfor %}
                         <th>Actions</th> <!-- Add a column for actions (remove button) -->
@@ -17,11 +17,11 @@
                 </thead>
                 <tbody>
                     <!-- This can be repeated structure for each specification -->
-                    <tr><td>Brand</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.brand }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
-                    <tr><td>Price</td>{% for laptop in laptops_to_compare %}<td>{{ laptop.price }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
+                    <tr><td>Brand</td>{% for laptop in selected_laptops %}<td>{{ laptop.brand }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
+                    <tr><td>Price</td>{% for laptop in selected_laptops %}<td>{{ laptop.price }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
                     <!-- ... More specifications ... -->
                     <!-- Add a remove button for each laptop -->
-                    {% for laptop in laptops_to_compare %}
+                    {% for laptop in selected_laptops %}
                         <tr>
                             <td>Remove</td>
                             <td><button class="remove-button" data-laptop-id="{{ laptop.id }}">Remove</button></td>
