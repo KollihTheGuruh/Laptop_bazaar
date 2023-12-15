@@ -16,10 +16,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- This can be repeated structure for each specification -->
-                    <tr><td>Brand</td>{% for laptop in selected_laptops %}<td>{{ laptop.brand }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
-                    <tr><td>Price</td>{% for laptop in selected_laptops %}<td>{{ laptop.price }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
-                    <!-- ... More specifications ... -->
+                    <!-- Loop through each specification -->
+                    {% for specification in ['brand', 'price', 'processor', 'graphics_card', 'ram', 
+                        'storage', 'display', 'battery_life', 'operating_system', 
+                        'ports', 'wireless_connectivity', 'keyboard', 'touchpad', 
+                        'webcam', 'audio', 'build_material', 'weight', 'dimensions', 
+                        'cooling_system', 'security_features', 'optical_drive', 
+                        'color_options', 'warranty'] %}
+                        <tr>
+                            <td>{{ specification|title|replace("_", " ") }}</td>
+                            {% for laptop in selected_laptops %}
+                                <td>{{ laptop|attribute:specification }}</td>
+                            {% endfor %}
+                        </tr>
+                    {% endfor %}
+
                     <!-- Add a remove button for each laptop -->
                     {% for laptop in selected_laptops %}
                         <tr>
@@ -35,5 +46,4 @@
         {% endif %}
     </div>
     <script src="/static/js/compare.js"></script>
-
 {% endblock %}
