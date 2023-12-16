@@ -30,6 +30,8 @@ header {
   font-size: 24px;
   font-weight: bold;
   text-align: center;
+  text-shadow: 0px 0px 10px #007bff;
+  
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflow text */
   position: relative; /* Required for animation */
@@ -39,10 +41,10 @@ header {
 /* Keyframes for the animation */
 @keyframes moveLeftRight {
   0% {
-    left: -100%; /* Start from the left side */
+    left: 100%; /* Start from the left side */
   }
   100% {
-    left: 100%; /* Move to the right side */
+    left: -100%; /* Move to the right side */
   }
 }
 
@@ -150,6 +152,8 @@ nav {
 /* Product section styles */
 .products {
   display: flex;
+  flex-grow: 1;
+  flex-basis:200;
   flex-wrap: wrap;
   justify-content: center;
   align-items: stretch;
@@ -209,7 +213,7 @@ button {
 }
 
 .product {
-  background-color: #b8b1b1;
+  background-color: #e7d9d9;
   border: 1px solid #ddd;
   padding: 10px;
   margin: 10px;
@@ -257,15 +261,17 @@ button {
 
 /* Footer styles */
 footer {
-  background-color: rgb(172, 172, 231);
+  background-color: yellow; /* Change to the yellow color you prefer */
   color: #0e0d0d;
-  position: fixed;
-  width: 100%;
-  bottom: 0;
+  position: fixed; /* Change to relative if using bottom property */
+  width: 100%; /* Adjust width as needed */
+  height: 20px; /* Adjust the height to make it smaller */
+  bottom: 0; /* Use bottom: 10px; with relative positioning */
   text-align: center;
-  padding: 1px 0;
+  padding: 0.5px 0; /* Adjust padding as needed */
   font-weight: bold;
 }
+
 
 /* Social media styles */
 .social-media {
