@@ -1,7 +1,7 @@
 from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import authenticate, login, logout
 from mainapp.forms.registration_form import RegistrationForm
-from .models import Laptop, User, Order
+from .models import Laptop, LaptopModel, User, Order
 from django.http import HttpResponse
 # Add any other necessary imports
 
@@ -67,6 +67,9 @@ def compare_view(request):
 
     # Fetch laptop details based on the selected IDs
     selected_laptops = Laptop.objects.filter(id__in=selected_product_ids)
+    context = {
+        "laptops": LaptopModel,
+    }
 
     return render(request, 'compare.html',  {'selected_laptops': selected_laptops})
 

@@ -86,3 +86,10 @@ class Order(models.Model):
 
     def __str__(self):
         return f'Order {self.id} by {self.customer}'
+
+class CompareCart(models.Model):
+    session_id = models.CharField(max_length=255)
+    laptops = models.ManyToManyField(Laptop)
+
+    def __str__(self):
+        return f"Compare Cart {self.session_id}"

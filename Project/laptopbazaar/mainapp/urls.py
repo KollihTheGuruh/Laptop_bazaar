@@ -12,5 +12,7 @@ urlpatterns = [
     path('login/', views.login_view, name='login'),
     path('register/', views.register_view, name='register'),
     path('laptop_detail/<int:laptop_id>/', views.laptop_detail, name='laptop_detail'),
+    path('dashboard/', views.dashboard_view, name='dashboard'),
+    path('', views.home_view, name='home'),
     # Add other URL patterns as needed
 ]
