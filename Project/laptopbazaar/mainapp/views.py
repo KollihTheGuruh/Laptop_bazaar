@@ -98,3 +98,7 @@ def laptop_detail(request, laptop_id):
 
     # Render a template with the laptop details
     return render(request, 'laptop_detail.html', {'laptop': laptop})
+
+def contact_us_view(request):
+    
+    return render(request, 'contact_us.html')
