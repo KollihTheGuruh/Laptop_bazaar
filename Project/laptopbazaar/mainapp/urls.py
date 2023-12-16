@@ -14,6 +14,5 @@ urlpatterns = [
     path('laptop_detail/<int:laptop_id>/', views.laptop_detail, name='laptop_detail'),
     path('dashboard/', views.dashboard_view, name='dashboard'),
     path('', views.home_view, name='home'),
-    path('contact_us/', views.contact_us_view, name='contact_us_view')
     # Add other URL patterns as needed
 ]

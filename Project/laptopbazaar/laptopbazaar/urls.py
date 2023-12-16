@@ -33,7 +33,7 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name='logout'),
     path('about_us/', about_us_view, name='about_us'),
     path('compare.html/', views.compare_view, name='compare_view'),
-    path('contact_us.html/', views.contact_us_view, name='contact_us_view')
+
     # You can add other app URLs similarly
 ]
 
