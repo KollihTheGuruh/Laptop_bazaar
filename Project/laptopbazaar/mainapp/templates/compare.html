@@ -6,7 +6,7 @@
         <h2>Compare Laptops</h2>
         {% if selected_laptops %}
             <table class="compare-table">
-                <thead>
+                
                     <tr>
                         <th>Feature</th>
                         {% for laptop in selected_laptops %}
@@ -14,7 +14,7 @@
                         {% endfor %}
                         <th>Actions</th> <!-- Add a column for actions (remove button) -->
                     </tr>
-                </thead>
+                
                 <tbody>
                     <!-- This can be repeated structure for each specification -->
                     <tr><td>Brand</td>{% for laptop in selected_laptops %}<td>{{ laptop.brand }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
