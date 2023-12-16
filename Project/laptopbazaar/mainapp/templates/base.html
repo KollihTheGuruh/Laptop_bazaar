@@ -20,7 +20,7 @@
                 <li><a href="{% url 'index' %}">Home</a></li>
                 <li><a href="{% url 'product_view' %}">Shop</a></li>
                 <li><a href="{% url 'about_us' %}" class="btn">About</a></li>
-                <li><a href='contact_us'>Contact</a></li> <!-- Added Contact link -->
+                <li><a href="#">Contact</a></li> <!-- Added Contact link -->
                 <li><a href="#"><img src="/static/images/laptop_bazaar_logo.jpg" alt="Cart" style="height:20px; width:auto;"> Cart</a></li> <!-- Added Cart link -->
                 {% if user.is_authenticated %}
                     <li><a href="{% url 'dashboard_view' %}">Dashboard</a></li>
