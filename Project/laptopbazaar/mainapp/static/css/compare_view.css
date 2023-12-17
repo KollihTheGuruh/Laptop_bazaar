@@ -1,101 +1,30 @@
-/* static/css/compare.css */
+/* compare_view.css */
 
-.compare-container {
-    margin: 20px auto; /* Center the container horizontally */
-    max-width: 1200px; /* Set a maximum width for responsiveness */
-    border-radius: 5px; /* Subtle rounded corners */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-  }
-  
-  .compare-header {
-    background-color: #007bff;
-    color: #fff;
-    padding: 15px 20px; /* Increase padding for better balance */
-    font-size: 20px; /* Adjust font size for better readability */
-    text-align: center;
-    font-weight: bold; /* Make it stand out */
-  }
-  
-  .compare-table {
-    width: 100%;
-    border-collapse: collapse ;
-    border-spacing: 0;
-    border: 1px solid #ff9900;
-    margin-top: 20px;
-  }
-  
-  .compare-table th, .compare-table td {
-    border: 1px solid #ddd;
-    padding: 12px;
-    text-align: left;
-  }
-  
-  .compare-table th {
-    background-color: #f2f2f2;
-    font-weight: bold;
-  }
-  
-  /* Add subtle table stripes for better visual distinction */
-  .compare-table tbody tr:nth-child(odd) {
-    background-color: #f9f9f9;
-  }
-  
-  .compare-actions {
-    text-align: center;
-    margin-top: 20px;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 10px 20px;
-    text-decoration: none;
-    border: none; /* Remove default border */
-    font-weight: bold;
-    border-radius: 5px;
-    transition: background-color 0.3s;
-  }
-  
-  .btn:hover {
-    background-color: #00628c; /* Darker shade on hover */
-  }
-  
-  .btn-danger {
-    background-color: #dc3545;
-    color: #fff;
-  }
-  
-  .btn-danger:hover {
-    background-color: #c61a31;
-  }
-  
-  .text-info {
-    color: #117a8b;
-  }
-  
-  /* Add styles for specific table cells */
-  
-  .compare-table .image-cell {
-    width: 150px; /* Define specific width for product images */
-    text-align: center;
-  }
-  
-  .compare-table .price-cell {
-    text-align: right;
-  }
-  
-  /* Add styles for highlighting differences between products */
-  
-  .compare-table .diff {
-    background-color: #f7f3f3; /* Light yellow highlight */
-    font-weight: bold;
-  }
-  
-  /* Add more styles as needed for specific elements and functionalities */
-  
-  .comparison-results-table {
-    background-color: white;
-    border-collapse: collapse;
-    width: 100;
-    margin: auto;
-    border: 1px solid #ff9900;
-  }
+.compare-view-container {
+  max-width: 1200px;
+
+  margin: 0 auto;
+}
+
+.comparison-results-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  border-spacing: 0;
+  border: 1px solid #ff9900;
+}
+
+.comparison-results-table th, .comparison-results-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.comparison-results-table th {
+  background-color: #f2f2f2;
+}
+
+.text-info {
+  color: #5bc0de;
+  margin-top: 20px;
+}
