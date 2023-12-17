@@ -73,13 +73,13 @@ body {
   border-radius: 6px;
 }
 
-label {
+/* label {
   display: block;
   width: 70px;
   height: 70px;
   background-color: #7b38d8;
   border: none;
-}
+} */
 
 /* .laptop-card {
   display: inline-table;
@@ -349,9 +349,9 @@ form {
   padding: 5 10px;
 }
 
-label {
+/* label {
   margin-bottom: 5px;
-}
+} */
 
 input-group{
   position: relative;
@@ -375,12 +375,12 @@ input:focus, input:valid{
 
 }
 
-input:focus ~ label, input:valid ~ label {
+/* input:focus ~ label, input:valid ~ label {
   transform: translate(-50%) scale(0.8);
   background-color: #212121;
   padding: 0.2em;
   color: #2196f3;
-}
+} */
 .product:hover {
   transform: translateY(-9px);
   box-shadow: 0 7px 7px rgba(4, 238, 82, 0.2);
