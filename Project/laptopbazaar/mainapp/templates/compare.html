@@ -1,3 +1,4 @@
+<!-- compare.html -->
 {% extends 'base.html' %}
 {% load static %}
 
@@ -18,7 +19,7 @@
                 </thead>
                 <tbody>
                     <!-- Loop through all available features -->
-                    {% for feature in laptop_model._meta.get_fields %}
+                    {% for feature in selected_laptops.0.laptop._meta.fields %}
                         <tr>
                             <td>{{ feature.verbose_name }}</td>
                             {% for laptop in selected_laptops %}

@@ -75,7 +75,8 @@ class Laptop(models.Model):
     objects = LaptopManager()
 
     def __str__(self):
-        return f"{self.brand} Laptop - Price: ${self.price}, Processor: {self.processor}, Graphics Card: {self.graphics_card}, RAM: {self.ram}GB, Storage: {self.storage}, Display: {self.display}, Battery Life: {self.battery_life}, Operating System: {self.operating_system}"
+        return f"{models}"
+        # return f"{self.brand} Laptop - Price: ${self.price}, Processor: {self.processor}, Graphics Card: {self.graphics_card}, RAM: {self.ram}GB, Storage: {self.storage}, Display: {self.display}, Battery Life: {self.battery_life}, Operating System: {self.operating_system}"
 # Order Model
 class Order(models.Model):
     STATUS_CHOICES = (
