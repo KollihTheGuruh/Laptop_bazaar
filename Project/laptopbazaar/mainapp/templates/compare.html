@@ -1,7 +1,9 @@
+<!-- compare.html -->
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/compare_view.css">
     <div class="compare-container">
         <h2>Compare Laptops</h2>
         {% if selected_laptops %}
@@ -42,19 +44,17 @@
                     </tr>
                     <!-- ... (other specifications) ... -->
 
-                    <!-- Add more rows for other specifications -->
-
                     <!-- Add a remove button for each laptop -->
                     {% for laptop in selected_laptops %}
                         <tr>
                             <td>Remove</td>
                             <td colspan="{{ selected_laptops|length }}">{{ laptop.brand }} {{ laptop.model }}</td>
-                            <td><button class="remove-button btn btn-danger" data-laptop-id="{{ laptop.id }}">Remove</button></td>
+                            <td><button class="remove-button" data-laptop-id="{{ laptop.id }}">Remove</button></td>
                         </tr>
                     {% endfor %}
                 </tbody>
             </table>
-            <button id="clear-comparison" class="btn btn-warning">Clear Comparison</button> <!-- Add a clear comparison button with styling -->
+            <button id="clear-comparison" class="btn btn-danger">Clear Comparison</button> <!-- Add a clear comparison button with styling -->
             <a href="{% url 'compare_view' %}?laptop_ids={{ selected_laptops|join:',' }}" class="btn btn-primary">Compare Now</a> <!-- Add a button to navigate to the compare page -->
         {% else %}
             <p class="text-info">Please select laptops to compare.</p>

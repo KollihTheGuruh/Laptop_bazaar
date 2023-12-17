@@ -1,0 +1,48 @@
+<!-- compare_view.html -->
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" type="text/css" href="/static/css/compare_view.css">
+    <div class="compare-view-container">
+        <h2>Comparison Results</h2>
+        {% if laptops %}
+            <table class="comparison-results-table">
+                <thead>
+                    <tr>
+                        <th>Feature</th>
+                        {% for laptop in laptops %}
+                            <th>{{ laptop.brand }} {{ laptop.model }}</th>
+                        {% endfor %}
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Display rows for LaptopModel class -->
+                    <tr>
+                        <td>Laptop Model</td>
+                        {% for laptop_model in laptops.0.laptopmodel_set.all %}
+                            <td>{{ laptop_model.name }}</td>
+                        {% endfor %}
+                    </tr>
+
+                    <!-- Other specifications (Brand, Price, etc.) -->
+                    <tr>
+                        <td>Brand</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.brand }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        {% for laptop in laptops %}
+                            <td>${{ laptop.price }}</td>
+                        {% endfor %}
+                    </tr>
+                    <!-- ... (other specifications) ... -->
+                </tbody>
+            </table>
+        {% else %}
+            <p class="text-info">No laptops available for comparison.</p>
+        {% endif %}
+    </div>
+{% endblock %}

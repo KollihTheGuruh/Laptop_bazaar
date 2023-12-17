@@ -61,18 +61,30 @@ def product_view(request):
     return render(request, 'product_list.html', {'laptops': laptops})
 
 # Compare View
+def fetch_laptops_by_ids(laptop_ids):
+    """
+    Fetch laptops by their IDs.
+
+    Args:
+    - laptop_ids: List of laptop IDs.
+
+    Returns:
+    - List of laptop instances.
+    """
+    return Laptop.objects.filter(id__in=laptop_ids)
+
 def compare_view(request):
-    # Get the list of selected laptop IDs from the query parameters
-    selected_product_ids = request.GET.getlist('product_id')
+    # Get laptop IDs from the query parameters
+    laptop_ids = request.GET.get('laptop_ids', '').split(',')
 
-    # Fetch laptop details based on the selected IDs
-    selected_laptops = Laptop.objects.filter(id__in=selected_product_ids)
-    context = {
-        "laptops": LaptopModel,
-    }
+    # Filter out empty strings from the split result
+    laptop_ids = list(filter(lambda x: x.strip(), laptop_ids))
 
-    return render(request, 'compare.html',  {'selected_laptops': selected_laptops})
+    # Fetch laptops using the IDs
+    laptops = fetch_laptops_by_ids(laptop_ids)
 
+    # Render the compare view template
+    return render(request, 'compare_view.html', {'laptops': laptops})
 # Checkout View
 def checkout_view(request):
     if request.method == "POST":
