@@ -206,6 +206,31 @@ button {
   height: 90;
 }
 
+.registration-container {
+  background-color: #981ec9;
+  box-shadow: 0 0 10px rgba(10, 0, 0, 0.1);
+  padding: 100px;
+  border-radius: 8px;
+  width: 500px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 5px;
+}
+
+input {
+  width: 20%;
+  padding: 1px;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
 .product:hover {
   transform: translateY(-9px);
   box-shadow: 0 7px 7px rgba(4, 238, 82, 0.2);
