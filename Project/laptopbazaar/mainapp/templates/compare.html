@@ -1,9 +1,8 @@
-<!-- compare.html -->
 {% extends 'base.html' %}
 {% load static %}
 
 {% block content %}
-<link rel="stylesheet" type="text/css" href="/static/css/compare_view.css">
+<link rel="stylesheet" type="text/css" href="{% static 'css/compare_view.css' %}">
     <div class="compare-container">
         <h2>Compare Laptops</h2>
         {% if selected_laptops %}
@@ -18,31 +17,22 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <!-- Display rows for LaptopModel class -->
-                    <tr>
-                        <td>Laptop Model</td>
-                        {% for laptop_model in selected_laptops.0.laptop.laptopmodel_set.all %}
-                            <td>{{ laptop_model.name }}</td>
-                        {% endfor %}
-                        <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
-                    </tr>
-
-                    <!-- Other specifications (Brand, Price, etc.) -->
-                    <tr>
-                        <td>Brand</td>
-                        {% for laptop in selected_laptops %}
-                            <td>{{ laptop.brand }}</td>
-                        {% endfor %}
-                        <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
-                    </tr>
-                    <tr>
-                        <td>Price</td>
-                        {% for laptop in selected_laptops %}
-                            <td>${{ laptop.price }}</td>
-                        {% endfor %}
-                        <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
-                    </tr>
-                    <!-- ... (other specifications) ... -->
+                    <!-- Loop through all available features -->
+                    {% for feature in laptop_model._meta.get_fields %}
+                        <tr>
+                            <td>{{ feature.verbose_name }}</td>
+                            {% for laptop in selected_laptops %}
+                                <td>
+                                    {% if feature.name == 'price' %}
+                                        ${{ laptop.price }}
+                                    {% else %}
+                                        {{ laptop|getattr:feature.name }}
+                                    {% endif %}
+                                </td>
+                            {% endfor %}
+                            <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
+                        </tr>
+                    {% endfor %}
 
                     <!-- Add a remove button for each laptop -->
                     {% for laptop in selected_laptops %}

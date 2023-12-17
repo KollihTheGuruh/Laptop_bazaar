@@ -41,7 +41,11 @@ class LaptopModel(models.Model):
     def __str__(self):
         return self.name
 
-# Laptop Model
+#class LaptopManager(models.Manager):
+class LaptopManager(models.Manager):
+    def get_all_laptops(self):
+        return self.all()
+
 class Laptop(models.Model):
     brand = models.CharField(max_length=100)
     price = models.DecimalField(max_digits=10, decimal_places=2)
@@ -67,9 +71,11 @@ class Laptop(models.Model):
     color_options = models.CharField(max_length=100)
     warranty = models.CharField(max_length=100)
     images = models.ImageField(upload_to='laptop_images/', null=True, blank=True, verbose_name='Laptop Image')
+
+    objects = LaptopManager()
+
     def __str__(self):
         return f"{self.brand} Laptop - Price: ${self.price}, Processor: {self.processor}, Graphics Card: {self.graphics_card}, RAM: {self.ram}GB, Storage: {self.storage}, Display: {self.display}, Battery Life: {self.battery_life}, Operating System: {self.operating_system}"
-
 # Order Model
 class Order(models.Model):
     STATUS_CHOICES = (
