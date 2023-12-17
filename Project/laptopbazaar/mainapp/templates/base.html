@@ -14,8 +14,10 @@
     <header>
         <nav>
             <div>
-                <a href="{% url 'index' %}"><img src="/static/images/laptop_bazaar_logo.webp" alt="Cart" style="height:80px; width:auto;"> Laptop Bazaar</a>
-                
+                <a href="{% url 'index' %}" class="brand-link">
+                    <img src="/static/images/laptop_bazaar_logo.webp" alt="Tittle" style="height: 80px; width: auto; border-radius: 60%;">
+                    Laptop Bazaar
+                </a>
             </div>
             <ul class="nav-links">
                 <li><a href="{% url 'index' %}" class="btn">Home</a></li>

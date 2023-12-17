@@ -52,16 +52,17 @@ header {
 
 .compare-container {
   color: white;
+
 }
 
 /* Compare button styles */
 .compare-btn {
   background-color: #007bff; /* Bootstrap primary blue for example */
   color: white; /* Text color set to white for better contrast */
-  border: 1px solid transparent; /* Add border to maintain structure */
+  border: 1px solid transparent; /* Added border to maintain structure */
   padding: 5px 10px; /* Smaller padding than the Add to Cart button */
   font-size: 14px; /* Smaller font size than the Add to Cart button */
-  margin: 10px 0; /* Add margin below the button */
+  margin: 10px 0; /* Added margin below the button */
   text-align: center;
   text-decoration: none;
   display: inline-block;
@@ -88,13 +89,20 @@ nav {
   padding: 0 20px;
 }
 
+.brand-link {
+  text-decoration: none;
+  color: #ff9900;
+  font-size: 24px;
+  font-weight: bold;
+}
 .login-container {
-  background-color: #2814df;
-  box-shadow: 0 0 10px rgba(10, 0, 0, 0.1);
+  /* background-color: #2814df; */
   padding: 50px;
   border-radius: 10px;
   width: 500px;
   text-align: left;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
+
 }
 
 .logo a {
@@ -157,11 +165,15 @@ nav {
 button {
   background-color: #4caf50;
   color: #fff;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
+  /* padding: 10px 20px; */
+  border: 0;
+  border-radius: 15px;
   cursor: pointer;
-  font-size: 16px;
+  width: 20%;
+  height: 50px;
+  font-weight: bold;
+  font-size: 24px;
+  margin: 100px;
 }
 
 button:hover {
@@ -207,8 +219,16 @@ button:hover {
   display: block;
 }
 
+/* .login-box input{
+  width: 100%;
+  height: 50px;
+    background: transparent;
+    border: 2px solid #333; */
+
 img {
   width: 100%;
+  /* box-shadow: 20px 7px 5px #D21369; */
+
 }
 
 button {
@@ -234,7 +254,7 @@ button {
 }
 
 .registration-container {
-  background-color: #2814df;
+  /* background-color: #2814df; */
   padding: 50px;
   border-radius: 10px;
   width: 500px;
@@ -245,6 +265,8 @@ button {
 form {
   display: flex;
   flex-direction: column;
+  width: 100;
+  padding: 5 10px;
 }
 
 label {
@@ -252,10 +274,15 @@ label {
 }
 
 input {
-  width: 20%;
-  padding: 1px;
-  margin-bottom: 10px;
+  width: 80%;
+  height:40px;
+  border: none;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 20px;
+  font-family: Arial, sans-serif;
   box-sizing: border-box;
+  font-size: 18px;
 }
 
 .product:hover {
