@@ -3,6 +3,7 @@
 {% load static %}
 
 {% block content %}
+
     <div class="login-container">
         <h2>Login </h2>
         <form method="post" action="{% url 'login' %}">
@@ -23,4 +24,5 @@
         </form>
         <p>Don't have an account? <a href="{% url 'register' %}">Register here</a></p>
     </div>
+
 {% endblock %}
