@@ -19,6 +19,8 @@ body {
   padding: 0;
 }
 
+
+
 .header {
   background-color: linear-gradient(to right, blue, orange, yellow, green, red, indigo, blue);
   /* color: #fff; */
@@ -365,14 +367,14 @@ input:focus ~ label, input:valid ~ label {
 
 /* Footer styles */
 footer {
-  background-color: yellow; /* Change to the yellow color you prefer */
+  /* background-color: white;  */
   color: #0e0d0d;
-  position: fixed; /* Change to relative if using bottom property */
-  width: 100%; /* Adjust width as needed */
-  height: 20px; /* Adjust the height to make it smaller */
-  bottom: 0; /* Use bottom: 10px; with relative positioning */
+  position: fixed; 
+  width: 80%; 
+  height: 20px; 
+  bottom: 0; 
   text-align: center;
-  padding: 0.5px 0; /* Adjust padding as needed */
+  padding: 0.5px 0; 
   font-weight: bold;
 }
 
