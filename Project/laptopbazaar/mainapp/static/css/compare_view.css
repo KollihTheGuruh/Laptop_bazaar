@@ -18,7 +18,9 @@
   
   .compare-table {
     width: 100%;
-    border-collapse: collapse;
+    border-collapse: collapse ;
+    border-spacing: 0;
+    border: 1px solid #ff9900;
     margin-top: 20px;
   }
   
@@ -90,4 +92,10 @@
   
   /* Add more styles as needed for specific elements and functionalities */
   
-  
+  .comparison-results-table {
+    background-color: white;
+    border-collapse: collapse;
+    width: 100;
+    margin: auto;
+    border: 1px solid #ff9900;
+  }
