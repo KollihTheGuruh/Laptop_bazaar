@@ -41,10 +41,10 @@ header {
 /* Keyframes for the animation */
 @keyframes moveLeftRight {
   0% {
-    left: 100%; /* Start from the left side */
+    left: -100%; /* Start from the left side */
   }
   100% {
-    left: -100%; /* Move to the right side */
+    left: 100%; /* Move to the right side */
   }
 }
 
@@ -114,17 +114,17 @@ nav {
 
 /* Hero section styles */
 .hero {
-  /*background-image: url('/static/images/laptop_bazaar_logo.jpg'); /* Replace with your image */
+  /*logo: url('/static/images/laptop_bazaar_logo.jpg'); /* Replace with your image */
   background-size: cover;
   background-position: left;
-  color: #0f86e7;
+  color: #498dc5;
   text-align: left;
   padding: 1px 0;
-  max-height: 50px;
+  max-height: 30px;
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 40px;
   margin-top: 0;
   margin-bottom: 60px;
 }
@@ -136,7 +136,7 @@ nav {
 
 .btn {
   display: inline-block;
-  padding: 10px 20px;
+  padding: 10px 10px;
   background-color: #ff9900;
   color: #fff;
   text-decoration: none;
@@ -202,7 +202,7 @@ button {
   text-align: left;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.8s;
-  width: 550px; /* Adjust the width to your liking */
+  width: 350px; /* Adjust the width to your liking */
   height: 90;
 }
 

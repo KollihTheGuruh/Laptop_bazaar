@@ -14,19 +14,20 @@
     <header>
         <nav>
             <div class="">
-                <a href="{% url 'index' %}">Laptop Bazaar</a>
+                <a href="{% url 'index' %}"><img src="/static/images/laptop_bazaar_logo.webp" alt="Cart" style="height:80px; width:auto;"> Laptop Bazaar</a>
+                
             </div>
             <ul class="nav-links">
-                <li><a href="{% url 'index' %}">Home</a></li>
-                <li><a href="{% url 'product_view' %}">Shop</a></li>
+                <li><a href="{% url 'index' %}" class="btn">Home</a></li>
+                <li><a href="{% url 'product_view' %}" class="btn">Shop</a></li>
                 <li><a href="{% url 'about_us' %}" class="btn">About</a></li>
-                <li><a href="{% url "#" %}">Contact</a></li> <!-- Added Contact link -->
-                <li><a href="#"><img src="/static/images/laptop_bazaar_logo.jpg" alt="Cart" style="height:20px; width:auto;"> Cart</a></li> <!-- Added Cart link -->
+                <li><a href="{% url 'contact_us' %}" class="btn">Contact</a></li> <!-- Added Contact link -->
+                <li><a href="#" class="btn"><img src="/static/images/laptop_bazaar_logo.jpg" alt="Cart" style="height:20px; width:auto;"> Cart</a></li> <!-- Added Cart link -->
                 {% if user.is_authenticated %}
-                    <li><a href="{% url 'dashboard_view' %}">Dashboard</a></li>
-                    <li><a href="{% url 'logout' %}">Logout</a></li>
+                    <li><a href="{% url 'dashboard_view' %}" class="btn">Dashboard</a></li>
+                    <li><a href="{% url 'logout' %}" class="btn">Logout</a></li>
                 {% else %}
-                    <li><a href="{% url 'login_view' %}">Login</a></li>
+                    <li><a href="{% url 'login_view' %}" class="btn">Login</a></li>
                 {% endif %}
             </ul>
         </nav>
