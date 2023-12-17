@@ -7,11 +7,67 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Detail</title>
+    <link rel="stylesheet" href="{% static 'css/laptop_detail.css' %}">
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
 </head>
 <body>
     <h1>Laptop Details</h1>
     <h2>{{ laptop.brand }} - {{ laptop.model }}</h2>
-    <p>Price: {{ laptop.price }}</p>
-    <!-- Add more laptop details as needed -->
+
+    <table>
+        <tr>
+            <th>Attribute</th>
+            <th>Value</th>
+        </tr>
+        <tr>
+            <td>Brand</td>
+            <td>{{ laptop.brand }}</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>{{ laptop.price }}</td>
+        </tr>
+        <!-- Add more rows for other attributes -->
+        <tr>
+            <td>Processor</td>
+            <td>{{ laptop.processor }}</td>
+        </tr>
+        <tr>
+            <td>Graphics Card</td>
+            <td>{{ laptop.graphics_card }}</td>
+        </tr>
+        <!-- Add more rows for other attributes -->
+        <!-- ... -->
+        <tr>
+            <td>Warranty</td>
+            <td>{{ laptop.warranty }}</td>
+        </tr>
+        <tr>
+            <td>Images</td>
+            <td>
+                {% if laptop.images %}
+                    <img src="{{ laptop.images.url }}" alt="{{ laptop.brand }} - {{ laptop.model }}">
+                {% else %}
+                    No image available
+                {% endif %}
+            </td>
+        </tr>
+    </table>
 </body>
 </html>

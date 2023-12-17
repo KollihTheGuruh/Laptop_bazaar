@@ -72,9 +72,6 @@ body {
   cursor: pointer;
   border-radius: 6px;
 }
-/* input[type=checkbox] {
-  display: ;
-}
 
 label {
   display: block;
@@ -84,12 +81,66 @@ label {
   border: none;
 }
 
-.compare-checkbox:hover {
-  background-color: #04AA6D;
-} */
-.laptop-card {
+/* .laptop-card {
   display: inline-table;
   flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+.laptop-card {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: inline-table;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.laptop-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.laptop-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.laptop-card h3 {
+  color: #333;
+  margin-top: 10px;
+}
+
+.laptop-card p {
+  color: #666;
+  font-size: 16px;
+}
+
+.laptop-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff9900;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.laptop-card a:hover {
+  background-color: #ff9900;
+}
+
+.laptop-card input.compare-checkbox {
+  margin-top: 10px;
 }
 
 .add-to-cart-btn {
@@ -125,13 +176,12 @@ nav {
   font-weight: bold;
 }
 .login-container {
-  /* background-color: #2814df; */
+  background-color: none;
   padding: 50px;
   border-radius: 10px;
   width: 500px;
   text-align: left;
   font-family: 'Times New Roman', Times, serif, sans-serif;
-
 }
 
 .logo a {
