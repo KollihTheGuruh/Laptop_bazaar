@@ -1,6 +1,6 @@
 <!-- compare_view.html -->
 {% extends 'base.html' %}
-{% load static %}
+<!-- {% load static %} -->
 
 {% block content %}
 <link rel="stylesheet" type="text/css" href="{% static 'css/compare_view.css' %}">
@@ -24,7 +24,7 @@
                             <td>{{ laptop_model.name }}</td>
                         {% endfor %}
                     </tr>
-
+                    
                     <!-- Other specifications (Brand, Price, etc.) -->
                     <tr>
                         <td>Brand</td>
@@ -35,7 +35,85 @@
                     <tr>
                         <td>Price</td>
                         {% for laptop in laptops %}
-                            <td>${{ laptop.price }}</td>
+                            <td>Ksh {{ laptop.price }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Processor</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.processor }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Graphics</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.graphics_card }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>RAM</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.ram }} GB</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Storage</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.storage }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Display</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.display }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Operating_System</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.operating_system }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Ports</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.ports }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Connectivity</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.wireless_connectivity }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Build Material</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.build_material }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Weight</td>
+                        {% for laptop in laptops %}
+                            <td>Kg {{ laptop.weight }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Security Features</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.security_features }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Battery Life</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.battery_life }}</td>
+                        {% endfor %}
+                    </tr>
+                    <tr>
+                        <td>Warranty</td>
+                        {% for laptop in laptops %}
+                            <td>{{ laptop.warranty }}</td>
                         {% endfor %}
                     </tr>
                     <!-- ... (other specifications) ... -->
