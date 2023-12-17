@@ -338,6 +338,7 @@ button {
   padding: 50px;
   border-radius: 10px;
   width: 500px;
+  margin: auto;
   text-align: right;
   font-family: 'Times New Roman', Times, serif, sans-serif;
 }
