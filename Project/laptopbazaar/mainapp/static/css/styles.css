@@ -7,7 +7,7 @@ body, h1, h2, ul, li, p {
   text-align: center;
 }
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Roboto', 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
   color: white;
   background-image: url('/static/images/background.jpg');
@@ -235,11 +235,11 @@ button {
 
 .registration-container {
   background-color: #2814df;
-  box-shadow: 0 0 10px rgba(10, 0, 0, 0.1);
   padding: 50px;
   border-radius: 10px;
   width: 500px;
-  text-align: left;
+  text-align: right;
+  font-family: 'Times New Roman', Times, serif, sans-serif;
 }
 
 form {
