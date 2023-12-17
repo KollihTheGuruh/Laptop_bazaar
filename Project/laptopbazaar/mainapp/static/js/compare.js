@@ -92,3 +92,44 @@ document.addEventListener('DOMContentLoaded', function() {
         updateComparisonView();
     }
 });
+
+async function updateComparisonView() {
+    console.log('Updating comparison view...');
+    const comparisonContainer = document.querySelector('.compare-container');
+
+    try {
+        if (comparisonContainer) {
+            if (comparisonList.length > 0) {
+                comparisonContainer.innerHTML = '<p>Comparing Laptops:</p>';
+                for (const laptopId of comparisonList) {
+                    // Fetch laptop details based on ID
+                    const laptopDetails = await fetchLaptopDetails(laptopId);
+                    // Update the DOM with the fetched details
+                    comparisonContainer.appendChild(createLaptopDetailsElement(laptopDetails));
+                }
+                // Optionally, you can add a button or link to navigate to the compare page
+                comparisonContainer.appendChild(createCompareNowButton());
+            } else {
+                comparisonContainer.innerHTML = '<p>Please select laptops to compare.</p>';
+            }
+        }
+    } catch (error) {
+        console.error('Error updating comparison view:', error);
+    }
+}
+
+// Function to fetch laptop details asynchronously
+async function fetchLaptopDetails(laptopId) {
+    // Make an asynchronous request to fetch laptop details based on the ID
+    // Return the fetched details
+}
+
+// Function to create an element for laptop details
+function createLaptopDetailsElement(laptopDetails) {
+    // Create and return an element based on the laptop details
+}
+
+// Function to create a 'Compare Now' button
+function createCompareNowButton() {
+    // Create and return a button or link element
+}
