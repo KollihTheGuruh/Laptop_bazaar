@@ -82,6 +82,10 @@ def checkout_view(request):
     else:
         # Display checkout form
         return render(request, 'checkout.html')
+    
+def contact_us_view(request):
+    
+        return render(request, 'contact_us.html')
 
 # Payment View
 def payment_view(request):
