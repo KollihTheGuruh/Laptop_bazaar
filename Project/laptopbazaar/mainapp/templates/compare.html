@@ -6,7 +6,7 @@
         <h2>Compare Laptops</h2>
         {% if selected_laptops %}
             <table class="compare-table">
-                
+                <thead>
                     <tr>
                         <th>Feature</th>
                         {% for laptop in selected_laptops %}
@@ -14,16 +14,39 @@
                         {% endfor %}
                         <th>Actions</th> <!-- Add a column for actions (remove button) -->
                     </tr>
-                
+                </thead>
                 <tbody>
-                    <!-- This can be repeated structure for each specification -->
-                    <tr><td>Brand</td>{% for laptop in selected_laptops %}<td>{{ laptop.brand }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
-                    <tr><td>Price</td>{% for laptop in selected_laptops %}<td>{{ laptop.price }}</td>{% endfor %}{% comment %}<td>Remove</td>{% endcomment %}</tr>
-                    <!-- ... More specifications ... -->
+                    <!-- Display rows for LaptopModel class -->
+                    <tr>
+                        <td>Laptop Model</td>
+                        {% for laptop_model in selected_laptops.0.laptop.laptopmodel_set.all %}
+                            <td>{{ laptop_model.name }}</td>
+                        {% endfor %}
+                        <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
+                    </tr>
+
+                    <!-- Other specifications (Brand, Price, etc.) -->
+                    <tr>
+                        <td>Brand</td>
+                        {% for laptop in selected_laptops %}
+                            <td>{{ laptop.brand }}</td>
+                        {% endfor %}
+                        <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
+                    </tr>
+                    <tr>
+                        <td>Price</td>
+                        {% for laptop in selected_laptops %}
+                            <td>{{ laptop.price }}</td>
+                        {% endfor %}
+                        <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
+                    </tr>
+                    <!-- ... (other specifications) ... -->
+
                     <!-- Add a remove button for each laptop -->
                     {% for laptop in selected_laptops %}
                         <tr>
                             <td>Remove</td>
+                            <td colspan="{{ selected_laptops|length }}">{{ laptop.brand }} {{ laptop.model }}</td>
                             <td><button class="remove-button" data-laptop-id="{{ laptop.id }}">Remove</button></td>
                         </tr>
                     {% endfor %}
@@ -35,6 +58,4 @@
         {% endif %}
     </div>
     <script src="/static/js/compare.js"></script>
-
 {% endblock %}
-
