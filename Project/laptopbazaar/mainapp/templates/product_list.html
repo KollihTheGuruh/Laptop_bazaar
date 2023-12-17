@@ -10,7 +10,8 @@
     <div>
         {% for laptop in laptops %}
             <div class="laptop-card">
-                <img src="/laptopbazaar/laptop_images" alt="{{ laptop.brand }} - {{ laptop.model }}">
+                <!-- Update the src attribute with the correct path to the laptop image -->
+                <img src="{{ .laptop_images.url }}" alt="{{ laptop.brand }} - {{ laptop.model }}">
                 <h3>{{ laptop.brand }} - {{ laptop.model }}</h3>
                 <p>Price: {{ laptop.price }}</p>
                 <a href="{% url 'laptop_detail' laptop.id %}">View Details</a>
@@ -20,7 +21,7 @@
             </div>
         {% endfor %}
     </div>
-    <div id="compare-selected-container" style="display: none; position: fixed; top: 10px; right: 10px;">
+    <div id="compare-selected-container" style="display: none; position: fixed; top: 130px; right: 10px;">
         <a href="#" class="btn compare-selected-btn" onclick="compareSelectedLaptops()">Compare Selected</a>
     </div>
     <script>
