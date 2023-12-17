@@ -35,7 +35,7 @@ header {
   white-space: nowrap; /* Prevent text from wrapping */
   overflow: hidden; /* Hide overflow text */
   position: relative; /* Required for animation */
-  animation: moveLeftRight 10s linear infinite; /* Animation settings */
+  animation: moveLeftRight 20s linear infinite; /* Animation settings */
 }
 
 /* Keyframes for the animation */
