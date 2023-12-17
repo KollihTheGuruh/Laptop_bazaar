@@ -90,7 +90,7 @@ body {
 } */
 
 .laptop-card {
-  background-color: rgb(10, 171, 199);
+  background-color: #e7d9d9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: inline-block;
