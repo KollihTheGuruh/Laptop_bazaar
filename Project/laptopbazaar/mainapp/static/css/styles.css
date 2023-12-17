@@ -350,6 +350,10 @@ footer {
   line-height: 1.5;
 }
 
+.laptop-item {
+  width: 10%;
+  height: 20px;
+}
 /* Responsive Design */
 @media screen and (max-width: 768px) {
   .product-list-container {
