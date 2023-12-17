@@ -36,7 +36,7 @@
                     <tr>
                         <td>Price</td>
                         {% for laptop in selected_laptops %}
-                            <td>{{ laptop.price }}</td>
+                            <td>${{ laptop.price }}</td>
                         {% endfor %}
                         <td></td> <!-- Add an empty column for the "Actions" column for consistency -->
                     </tr>
@@ -52,10 +52,11 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <button id="clear-comparison">Clear Comparison</button> <!-- Add a clear comparison button -->
+            <button id="clear-comparison" class="btn btn-danger">Clear Comparison</button> <!-- Add a clear comparison button with styling -->
+            <a href="{% url 'compare_view' %}?laptop_ids={{ selected_laptops|join:',' }}" class="btn btn-primary">Compare Now</a> <!-- Add a button to navigate to the compare page -->
         {% else %}
-            <p>Please select laptops to compare.</p>
+            <p class="text-info">Please select laptops to compare.</p>
         {% endif %}
     </div>
-    <script src="/static/js/compare.js"></script>
+    <script src="{% static 'js/compare.js' %}"></script>
 {% endblock %}
