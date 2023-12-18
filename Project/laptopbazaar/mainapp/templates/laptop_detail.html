@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Laptop Detail</title>
-    <link rel="stylesheet" href="{% static 'css/laptop_detail.css' %}">
+    <link rel="stylesheet" href="/static/css/laptop_detail.css">
     <style>
         table {
             width: 100%;
@@ -40,10 +40,13 @@
             <td>{{ laptop.brand }}</td>
         </tr>
         <tr>
+            <td>Storage</td>
+            <td> {{ laptop.storage }}</td>
+        </tr>
+        <tr>
             <td>Price</td>
             <td> Ksh{{ laptop.price }}</td>
         </tr>
-        <!-- Add more rows for other attributes -->
         <tr>
             <td>Processor</td>
             <td>{{ laptop.processor }}</td>
@@ -60,15 +63,65 @@
             <td>Warranty</td>
             <td>{{ laptop.warranty }}</td>
         </tr>
+        < <tr>
+            <td>Display</td>
+            <td> {{ laptop.display }}</td>
+        </tr>
         <tr>
-            <td>Images</td>
-            <td>
-                {% if laptop.images %}
-                    <img src="{{ laptop.images.url }}" alt="{{ laptop.brand }} - {{ laptop.model }}">
-                {% else %}
-                    No image available
-                {% endif %}
-            </td>
+            <td>Battery Life</td>
+            <td> {{ laptop.battery_life }}</td>
+        </tr>
+        <tr>
+            <td>Operating System</td>
+            <td> {{ laptop.operating_system }}</td>
+        </tr>
+        <tr>
+            <td>Ports</td>
+            <td> {{ laptop.ports }}</td>
+        </tr>
+        <tr>
+            <td>Connectivity</td>
+            <td> {{ laptop.wireless_connectivity }}</td>
+        </tr>
+        <tr>
+            <td>Keyboard</td>
+            <td> {{ laptop.keyboard }}</td>
+        </tr>
+        <tr>
+            <td>Touchpad</td>
+            <td> {{ laptop.touchpad }}</td>
+        </tr>
+        <tr>
+            <td>Webcam</td>
+            <td> {{ laptop.webcam }}</td>
+        </tr>
+        <tr>
+            <td>Audio</td>
+            <td> {{ laptop.audio }}</td>
+        </tr>
+        <tr>
+            <td>Material</td>
+            <td> {{ laptop.build_material }}</td>
+        </tr>
+        <tr>
+            <td>Weight</td>
+            <td> {{ laptop.weight }}</td>
+        </tr>
+        <tr>
+            <td>Dimensions</td>
+            <td> {{ laptop.dimensions }}</td>
+        </tr>
+        <tr>
+            <td>Cooling System</td>
+            <td> {{ laptop.cooling_system }}</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td> {{ laptop.security_features }}</td>
+        </tr>
+        <tr>
+            <td>Colors</td>
+            <td> {{ laptop.color_options }}</td>
         </tr>
     </table>
 </body>

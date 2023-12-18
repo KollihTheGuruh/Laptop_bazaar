@@ -2,14 +2,18 @@ body {
     font-family: 'Roboto', sans-serif;
     background: linear-gradient(to right, #f8f8f8, #f2f2f2);
     color: #333;
-    margin: 20px;
+    margin: center;
     border: 1px solid #ddd;
+    font-size: 20px;
   }
   
   h1, h2 {
-    color: #262626;
-    font-weight: 400;
-    margin-bottom: 10px;
+    color: #ff9900;
+    font-weight: bolder;
+    margin-bottom: auto;
+    margin: center;
+    
+    
   }
   
   table {
@@ -18,15 +22,18 @@ body {
     margin-top: 20px;
     background-color: #fff;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ff9900;
   }
   
   th {
     border-bottom: 2px solid #ddd;
     background-color: #f5f5f5;
-    color: #333;
-    font-weight: 500;
+    color: #ff9900;
+    font-weight: bold;
     padding: 12px;
     text-align: left;
+    margin: center;
+
   }
   
   td {
