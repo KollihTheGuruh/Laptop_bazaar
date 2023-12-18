@@ -1,5 +1,6 @@
 from django.urls import path
 from . import views
+from .views import cart_view 
 
 urlpatterns = [
     #path('', views.home_view, name='home'),
@@ -15,5 +16,6 @@ urlpatterns = [
     path('dashboard/', views.dashboard_view, name='dashboard'),
     path('', views.home_view, name='home'),
     path('contact_us/', views.contact_us_view, name='contact_us_view'),
+    path('cart/', cart_view, name='cart_view'),
     # Add other URL patterns as needed
 ]

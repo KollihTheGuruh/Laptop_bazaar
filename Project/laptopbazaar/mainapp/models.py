@@ -100,3 +100,11 @@ class CompareCart(models.Model):
 
     def __str__(self):
         return f"Compare Cart {self.session_id}"
+    
+class CartItem(models.Model):
+    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    laptop = models.ForeignKey(Laptop, on_delete=models.CASCADE)
+    quantity = models.IntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.user.username}'s Cart Item: {self.laptop.brand} {self.laptop.model}"
