@@ -2,7 +2,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.contrib.auth import authenticate, login, logout
 from mainapp.forms.registration_form import RegistrationForm
 from .models import Laptop, LaptopModel, User, Order, CartItem
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 # Add any other necessary imports
 
 def home_view(request):
@@ -140,3 +140,14 @@ def cart_view(request):
     cart_items = CartItem.objects.all()  # Modify this query based on your model structure and logic
     
     return render(request, 'cart_view.html', context={'cart_items': cart_items})
+
+def update_cart(request):
+    laptop_id = request.GET.get('laptop_id')
+    # Perform the logic to update the cart, e.g., add the laptop to the cart
+    # This is just a placeholder, replace it with your actual cart update logic
+    cart_items.add(laptop_id)
+
+    # Get the updated cart count
+    cart_count = cart_items.count()
+
+    return JsonResponse({'cart_count': cart_count})

@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-from .views import cart_view 
+from .views import cart_view, laptop_detail, update_cart 
 
 urlpatterns = [
     #path('', views.home_view, name='home'),
@@ -17,5 +17,6 @@ urlpatterns = [
     path('', views.home_view, name='home'),
     path('contact_us/', views.contact_us_view, name='contact_us_view'),
     path('cart/', cart_view, name='cart_view'),
-    # Add other URL patterns as needed
+    path('laptop_detail/<int:laptop_id>/', laptop_detail, name='laptop_detail'),
+    path('update_cart/', update_cart, name='update_cart'),
 ]
