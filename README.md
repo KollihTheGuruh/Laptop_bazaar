@@ -2,17 +2,18 @@
 <p>Laptop Bazaar is a web application designed to provide users with a seamless and personalized experience in finding, comparing, and purchasing laptops. Whether you are a tech-savvy shopper looking for specific specifications or a comparative buyer wanting to make an informed decision, Laptop Bazaar has you covered.</p>
 
 <h2>Table of Contents</h2>
-Features
-Technology Stack
-Installation
-Usage
-API Documentation
-User Stories
-Mockups
-Contributing
-License
-Features
-Laptop Selection:
+1. Features
+2. Technology Stack
+3. Installation
+4. Usage
+5. API Documentation
+6. User Stories
+7. Mockups
+8. Contributing
+9. License
+
+<h2>Features</h2>
+<h3>Laptop Selection:
 
 Filter laptops by specifications such as RAM, processor type, and price.
 Real-time updates as filter options are changed.
