@@ -15,16 +15,31 @@
 }
 
 .comparison-results-table th, .comparison-results-table td {
-  border: 1px solid #ddd;
+  border: 1px solid #ff9900;
   padding: 10px;
   text-align: left;
 }
 
 .comparison-results-table th {
-  background-color: #f2f2f2;
+  background-color: #080808;
+  text-emphasis-color: #ff9900;
+  color: #ff9900;
+  font-weight: bold;
 }
+
 
 .text-info {
   color: #5bc0de;
   margin-top: 20px;
+}
+
+h2 {
+  display: block;
+  font-size: 2em;
+  margin-block-start: 0.83em;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bolder;
+  color: #ff9900;
 }
