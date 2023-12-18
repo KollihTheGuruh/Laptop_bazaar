@@ -1,5 +1,5 @@
-<h1>Laptop Bazaar</h1>
-Laptop Bazaar is a web application designed to provide users with a seamless and personalized experience in finding, comparing, and purchasing laptops. Whether you are a tech-savvy shopper looking for specific specifications or a comparative buyer wanting to make an informed decision, Laptop Bazaar has you covered.
+<h1><strong>Laptop Bazaar</strong></h1>
+<p>Laptop Bazaar is a web application designed to provide users with a seamless and personalized experience in finding, comparing, and purchasing laptops. Whether you are a tech-savvy shopper looking for specific specifications or a comparative buyer wanting to make an informed decision, Laptop Bazaar has you covered.</p>
 
 <h2>Table of Contents</h2>
 Features
