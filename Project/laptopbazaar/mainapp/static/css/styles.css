@@ -89,14 +89,53 @@ body {
   box-sizing: border-box;
 } */
 
+
+.compare-checkbox {
+  /* Hide the default checkbox */
+  display: none;
+}
+
+/* Style the custom checkbox container */
+.compare-checkbox-container {
+  position: relative;
+}
+
+/* Style the custom checkbox */
+.compare-checkbox + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #f3f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Style the checked state of the custom checkbox */
+.compare-checkbox:checked + label::before {
+  content: '\2713'; /* Unicode checkmark character */
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 14px;
+  text-align: center;
+  font-size: 18px;
+  color: #020202; /* Green color for checked state */
+  background-color: #fff;
+  border: 1px solid #4CAF50;
+}
+
 .laptop-card {
   background-color: #e7d9d9;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
   display: inline-block;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
   flex-direction: column;
   margin: 0;
   padding: 0;
+
   box-sizing: border-box;
   padding: 20px;
   margin: 15px;

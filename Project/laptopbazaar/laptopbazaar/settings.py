@@ -20,8 +20,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # Media files (uploads)
-MEDIA_URL = "/media/"
-MEDIA_ROOT = BASE_DIR / "media/"
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = 'django-insecure-zc@b!lr-zcr4lozxxi_so(1318p2ww1@tccyo4o287#hel+58q'
@@ -130,7 +131,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 #     os.path.join(BASE_DIR, 'mainapp/static'),
 # ]
 
-STATIC_ROOT = '/home/kollihtheguruh/Laptopbazaar/Project/laptopbazaar/static/'
+STATIC_ROOT = '/home/kollihtheguruh/Laptop_bazaar/Project/laptopbazaar/static/'
 
 
 # Default primary key field type

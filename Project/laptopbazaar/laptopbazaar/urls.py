@@ -36,7 +36,6 @@ urlpatterns = [
     path('contact_us.html/', views.contact_us_view, name='contact_us'),
     path('cart/', cart_view, name='cart_view'),
 
-    # You can add other app URLs similarly
 ]
 
 if settings.DEBUG:

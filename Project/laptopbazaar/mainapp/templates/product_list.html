@@ -11,13 +11,17 @@
         {% for laptop in laptops %}
             <div class="laptop-card">
                 <!-- Update the src attribute with the correct path to the laptop image -->
-                <img src="{{ .laptop_images.url }}" alt="{{ laptop.brand }} - {{ laptop.model }}">
+                <img src="{% get_media_prefix %}laptop_images/{{ laptop.images }}" alt="{{ laptop.brand }} {{ laptop.model }}">
                 <h3>{{ laptop.brand }} - {{ laptop.model }}</h3>
                 <p>Price: {{ laptop.price }}</p>
                 <a href="{% url 'laptop_detail' laptop.id %}">View Details</a>
                 <br>
-                <input type="checkbox" class="compare-checkbox" data-laptop-id="{{ laptop.id }}">
                 <a href="#" class="btn add-to-cart-btn">Add to Cart</a>
+                <div class="compare-checkbox-container">
+                    <input type="checkbox" class="compare-checkbox" id="compare-{{ laptop.id }}" data-laptop-id="{{ laptop.id }}">
+                    <label for="compare-{{ laptop.id }}"></label>
+                  </div>
+                
             </div>
         {% endfor %}
     </div>

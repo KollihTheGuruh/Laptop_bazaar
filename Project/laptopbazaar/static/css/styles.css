@@ -19,9 +19,11 @@ body {
   padding: 0;
 }
 
-header {
-  background-color: #1443df;
-  color: #fff;
+
+
+.header {
+  background-color: linear-gradient(to right, blue, orange, yellow, green, red, indigo, blue);
+  /* color: #fff; */
   text-align: center;
   padding: 20px 0;
 }
@@ -68,9 +70,126 @@ header {
   display: inline-block;
   transition-duration: 0.4s;
   cursor: pointer;
-  border-radius: 6px; /* Optional: you can adjust border-radius to your liking */
+  border-radius: 6px;
 }
 
+/* label {
+  display: block;
+  width: 70px;
+  height: 70px;
+  background-color: #7b38d8;
+  border: none;
+} */
+
+/* .laptop-card {
+  display: inline-table;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} */
+
+
+.compare-checkbox {
+  /* Hide the default checkbox */
+  display: none;
+}
+
+/* Style the custom checkbox container */
+.compare-checkbox-container {
+  position: relative;
+}
+
+/* Style the custom checkbox */
+.compare-checkbox + label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 14px;
+  height: 14px;
+  background-color: #f3f0f0;
+  border: 1px solid #ccc;
+  cursor: pointer;
+}
+
+/* Style the checked state of the custom checkbox */
+.compare-checkbox:checked + label::before {
+  content: '\2713'; /* Unicode checkmark character */
+  display: block;
+  width: 100%;
+  height: 100%;
+  line-height: 14px;
+  text-align: center;
+  font-size: 18px;
+  color: #020202; /* Green color for checked state */
+  background-color: #fff;
+  border: 1px solid #4CAF50;
+}
+
+.laptop-card {
+  background-color: #e7d9d9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  display: inline-block;
+  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+  padding: 20px;
+  margin: 15px;
+  text-align: center;
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.laptop-card:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.laptop-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.laptop-card h3 {
+  color: #333;
+  margin-top: 10px;
+}
+
+.laptop-card p {
+  color: #666;
+  font-size: 16px;
+}
+
+.laptop-card a {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ff9900;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.laptop-card a:hover {
+  background-color: #ff9900;
+}
+
+.laptop-card input.compare-checkbox {
+  margin-top: 10px;
+}
+
+.add-to-cart-btn {
+  text-align: right;
+  display: inline-block;
+  text-decoration:none ;
+  margin: 10px 0;
+  width: 90px;
+  height: 20px;
+}
 .compare-btn:hover {
   background-color: #0056b3; /* A darker shade of blue for hover effect */
   color: white;
@@ -96,13 +215,13 @@ nav {
   font-weight: bold;
 }
 .login-container {
-  /* background-color: #2814df; */
+  background-color: none;
   padding: 50px;
   border-radius: 10px;
+  margin: auto;
   width: 500px;
   text-align: left;
   font-family: 'Times New Roman', Times, serif, sans-serif;
-
 }
 
 .logo a {
@@ -258,6 +377,7 @@ button {
   padding: 50px;
   border-radius: 10px;
   width: 500px;
+  margin: auto;
   text-align: right;
   font-family: 'Times New Roman', Times, serif, sans-serif;
 }
@@ -269,9 +389,9 @@ form {
   padding: 5 10px;
 }
 
-label {
+/* label {
   margin-bottom: 5px;
-}
+} */
 
 input-group{
   position: relative;
@@ -295,12 +415,12 @@ input:focus, input:valid{
 
 }
 
-input:focus ~ label, input:valid ~ label {
+/* input:focus ~ label, input:valid ~ label {
   transform: translate(-50%) scale(0.8);
   background-color: #212121;
   padding: 0.2em;
   color: #2196f3;
-}
+} */
 .product:hover {
   transform: translateY(-9px);
   box-shadow: 0 7px 7px rgba(4, 238, 82, 0.2);
@@ -338,14 +458,14 @@ input:focus ~ label, input:valid ~ label {
 
 /* Footer styles */
 footer {
-  background-color: yellow; /* Change to the yellow color you prefer */
+  /* background-color: white;  */
   color: #0e0d0d;
-  position: fixed; /* Change to relative if using bottom property */
-  width: 100%; /* Adjust width as needed */
-  height: 20px; /* Adjust the height to make it smaller */
-  bottom: 0; /* Use bottom: 10px; with relative positioning */
+  position: fixed; 
+  width: 80%; 
+  height: 20px; 
+  bottom: 0; 
   text-align: center;
-  padding: 0.5px 0; /* Adjust padding as needed */
+  padding: 0.5px 0; 
   font-weight: bold;
 }
 

@@ -145,9 +145,9 @@ def update_cart(request):
     laptop_id = request.GET.get('laptop_id')
     # Perform the logic to update the cart, e.g., add the laptop to the cart
     # This is just a placeholder, replace it with your actual cart update logic
-    cart_items.add(laptop_id)
+    CartItem.add(laptop_id)
 
     # Get the updated cart count
-    cart_count = cart_items.count()
+    cart_count = CartItem.count()
 
     return JsonResponse({'cart_count': cart_count})
