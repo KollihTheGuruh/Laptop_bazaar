@@ -135,9 +135,9 @@ body {
   flex-direction: column;
   margin: 0;
   padding: 0;
-
+  /* gap: 20px 10px; */
   box-sizing: border-box;
-  padding: 20px;
+  padding: 2px;
   margin: 15px;
   text-align: center;
   transition: box-shadow 0.3s ease-in-out;
